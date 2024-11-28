@@ -1,4 +1,4 @@
-<config configName="FreeRTOS" projectName="tcpip_iperf_10base_t1s_freertos" configVersion="1.1" device="ATSAME54P20A" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="FreeRTOS" projectName="tcpip_iperf_10base_t1s_freertos" configVersion="1.1" device="ATSAME54P20A" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.0">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -15805,7 +15805,7 @@
       </entry>
       <entry>
          <file>..\src\config\FreeRTOS\driver\lan865x\src\dynamic\drv_lan865x_api.c</file>
-         <hash>9c39b406110bae9dea3abc72c19d9e72a9471362acae3aea3298b73a38ba8bad</hash>
+         <hash>be955d52a248be4bd1353bf5b6b599eab05f41202c2770dcfee7783c9c807345</hash>
       </entry>
       <entry>
          <file>..\src\config\FreeRTOS\driver\lan865x\src\dynamic\drv_lan865x_local.h</file>
@@ -16133,7 +16133,7 @@
       </entry>
       <entry>
          <file>..\src\config\FreeRTOS\library\tcpip\src\ipv4.c</file>
-         <hash>5ff453e661ba6b6a9dd56b60a3cd423b067b80aac5bf81d7fbae7f59c76d2e13</hash>
+         <hash>a267bbbf54e48ce952155e9c4f502a94b655e1f4be197117b8da8e153bbd0c3d</hash>
       </entry>
       <entry>
          <file>..\src\config\FreeRTOS\library\tcpip\src\ipv4_manager.h</file>
@@ -16217,7 +16217,7 @@
       </entry>
       <entry>
          <file>..\src\config\FreeRTOS\library\tcpip\src\tcp.c</file>
-         <hash>396fa95231f601f0291cc765e5413c1fe623eb555791e23eca7c1c66909e1725</hash>
+         <hash>d634f61a2796c02927a61e43312b0d94503b3988d4218d2f993f6ed45fd0e9b1</hash>
       </entry>
       <entry>
          <file>..\src\config\FreeRTOS\library\tcpip\src\tcp_manager.h</file>
@@ -16233,7 +16233,7 @@
       </entry>
       <entry>
          <file>..\src\config\FreeRTOS\library\tcpip\src\tcpip_commands.c</file>
-         <hash>67640c4c586d9328aa514eeed02861fed9fc541f41704629bf8f455e0eff0686</hash>
+         <hash>6b0979407f65fe3e4a0345b59551018c84bd9968de00716b10f5a51d4c47594a</hash>
       </entry>
       <entry>
          <file>..\src\config\FreeRTOS\library\tcpip\src\tcpip_commands_manager.h</file>
@@ -16265,7 +16265,7 @@
       </entry>
       <entry>
          <file>..\src\config\FreeRTOS\library\tcpip\src\tcpip_mac_bridge_private.h</file>
-         <hash>4f94e7c23deb567c6717c1e790d8dd779ce85835dfb3b28f104e0460f8b90dcb</hash>
+         <hash>8a616af6e5e81b37d32df4a326d20d6f52e91a2053211a6abf2ec9391ef2b2a3</hash>
       </entry>
       <entry>
          <file>..\src\config\FreeRTOS\library\tcpip\src\tcpip_manager.c</file>
@@ -16385,7 +16385,7 @@
       </entry>
       <entry>
          <file>..\src\config\FreeRTOS\library\tcpip\tcpip_mac.h</file>
-         <hash>218593a61106f8271a1f93a33124f01482c46982a7b70fa29a4916045e466599</hash>
+         <hash>7137ed6478803b511ada20f717583d7168e680c784b6d6c42dbaa75e4b928ea1</hash>
       </entry>
       <entry>
          <file>..\src\config\FreeRTOS\library\tcpip\tcpip_mac_bridge.h</file>
