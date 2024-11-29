@@ -59,11 +59,12 @@ hex_file_entry_B = None
 hex_file_entry_C = None
 hex_file_entry_D = None
 
-HEX_FILE_01="..\\apps\\tcpip_iperf_lan867x\\firmware\\tcpip_iperf_lan867x_freertos.X\\dist\\FreeRTOS\\production\\tcpip_iperf_lan867x_freertos.X.production.hex"
-HEX_FILE_02="..\\apps\\tcpip_iperf_lan867x\\firmware\\tcpip_iperf_lan867x_freertos.X\\dist\\FreeRTOS\\production\\tcpip_iperf_lan867x_freertos.X.production.hex"
-HEX_FILE_03="..\\apps\\tcpip_iperf_lan867x\\firmware\\tcpip_iperf_lan867x_freertos.X\\dist\\FreeRTOS\\production\\tcpip_iperf_lan867x_freertos.X.production.hex"
-HEX_FILE_04="..\\apps\\tcpip_iperf_lan867x\\firmware\\tcpip_iperf_lan867x_freertos.X\\dist\\FreeRTOS\\production\\tcpip_iperf_lan867x_freertos.X.production.hex"
-MDB_PATH="c:\\Program Files\\Microchip\\MPLABX\\v6.15\\mplab_platform\\bin\\mdb.bat"
+
+HEX_FILE_01="..\\apps\\tcpip_iperf_lan865x\\firmware\\tcpip_iperf_10base_t1s_freertos.X\\dist\\FreeRTOS\\production\\tcpip_iperf_10base_t1s_freertos.X.production.hex"
+HEX_FILE_02="..\\apps\\tcpip_iperf_lan865x\\firmware\\tcpip_iperf_10base_t1s_freertos.X\\dist\\FreeRTOS_Nd_1\\production\\tcpip_iperf_10base_t1s_freertos.X.production.hex"
+HEX_FILE_03="..\\apps\\tcpip_iperf_lan865x\\firmware\\tcpip_iperf_10base_t1s_freertos.X\\dist\\FreeRTOS_Nd_2\\production\\tcpip_iperf_10base_t1s_freertos.X.production.hex"
+HEX_FILE_04="..\\apps\\tcpip_iperf_lan865x\\firmware\\tcpip_iperf_10base_t1s_freertos.X\\dist\\FreeRTOS_Nd_3\\production\\tcpip_iperf_10base_t1s_freertos.X.production.hex"
+MDB_PATH="c:\\Program Files\\Microchip\\MPLABX\\v6.20\\mplab_platform\\bin\\mdb.bat"
 HW_TOOL="EDBG"
 TG_MCU="ATSAME54P20A"
 HW_SERIAL_01="ATML3264031800001044"
