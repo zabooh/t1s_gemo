@@ -95,7 +95,7 @@ const DRV_LAN865X_Configuration drvLan865xInitData[] = {
     .rxDescriptors =        DRV_LAN865X_MAC_RX_DESCRIPTORS_IDX0,
     .rxDescBufferSize =     DRV_LAN865X_MAX_RX_BUFFER_IDX0,
     .chunkSize =            DRV_LAN865X_CHUNK_SIZE_IDX0,
-    .nodeId =               DRV_LAN865X_PLCA_NODE_ID_IDX0,
+    .nodeId =               DRV_LAN865X_PLCA_NODE_ID_IDX0_X,
     .nodeCount =            DRV_LAN865X_PLCA_NODE_COUNT_IDX0,
     .burstCount =           DRV_LAN865X_PLCA_BURST_COUNT_IDX0,
     .burstTimer =           DRV_LAN865X_PLCA_BURST_TIMER_IDX0,
@@ -313,7 +313,7 @@ const TCPIP_NETWORK_CONFIG __attribute__((unused))  TCPIP_HOSTS_CONFIGURATION[] 
     {
         .interface = TCPIP_NETWORK_DEFAULT_INTERFACE_NAME_IDX0,
         .hostName = TCPIP_NETWORK_DEFAULT_HOST_NAME_IDX0,
-        .macAddr = TCPIP_NETWORK_DEFAULT_MAC_ADDR_IDX0,
+        .macAddr = TCPIP_NETWORK_DEFAULT_MAC_ADDR_IDX0_X,
         .ipAddr = TCPIP_NETWORK_DEFAULT_IP_ADDRESS_IDX0,
         .ipMask = TCPIP_NETWORK_DEFAULT_IP_MASK_IDX0,
         .gateway = TCPIP_NETWORK_DEFAULT_GATEWAY_IDX0,

@@ -80,7 +80,25 @@
 #include "task.h"
 #include "app.h"
 
+#ifdef T1S_CONFIG_NODE_0
+#define DRV_LAN865X_PLCA_NODE_ID_IDX0_X   0
+#define TCPIP_NETWORK_DEFAULT_MAC_ADDR_IDX0_X  "00:04:25:1C:A0:00"
+#endif
 
+#ifdef T1S_CONFIG_NODE_1
+#define DRV_LAN865X_PLCA_NODE_ID_IDX0_X   1
+#define TCPIP_NETWORK_DEFAULT_MAC_ADDR_IDX0_X  "00:04:25:1C:A0:01"
+#endif
+
+#ifdef T1S_CONFIG_NODE_2
+#define DRV_LAN865X_PLCA_NODE_ID_IDX0_X   2
+#define TCPIP_NETWORK_DEFAULT_MAC_ADDR_IDX0_X  "00:04:25:1C:A0:02"
+#endif
+
+#ifdef T1S_CONFIG_NODE_3
+#define DRV_LAN865X_PLCA_NODE_ID_IDX0_X   3
+#define TCPIP_NETWORK_DEFAULT_MAC_ADDR_IDX0_X  "00:04:25:1C:A0:03"
+#endif
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility

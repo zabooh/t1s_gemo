@@ -28,6 +28,7 @@
 // *****************************************************************************
 
 #include "app.h"
+#include "config/FreeRTOS/definitions.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -109,7 +110,10 @@ void APP_Initialize ( void )
 
 void APP_Tasks ( void )
 {
-
+    SYS_STATUS tcpipStat;
+    TCPIP_NET_HANDLE netH;
+    static IPV4_ADDR dwLastIP = {-1};
+    
     /* Check the application's current state. */
     switch ( appData.state )
     {
@@ -118,7 +122,7 @@ void APP_Tasks ( void )
         {
             bool appInitialized = true;
 
-
+            
             if (appInitialized)
             {
 
@@ -127,12 +131,52 @@ void APP_Tasks ( void )
             break;
         }
 
+      case APP_STATE_INIT_TCPIP_WAIT_START:
+            tcpipStat = TCPIP_STACK_Status(sysObj.tcpip);
+            if (tcpipStat < 0) {
+                SYS_CONSOLE_PRINT("TCP/IP stack initialization failed!\r\n");
+                appData.state = APP_STATE_IDLE;
+            } else if (tcpipStat == SYS_STATUS_READY) {
+                SYS_CONSOLE_PRINT("TCP/IP stack successful!\r\n");
+                appData.state = APP_STATE_INIT_TCPIP_WAIT_FOR_IP;
+            }
+            break;
+
+        case APP_STATE_INIT_TCPIP_WAIT_FOR_IP:
+            netH = TCPIP_STACK_IndexToNet(0);
+            if (!TCPIP_STACK_NetIsReady(netH)) {
+                break;
+            }
+            appData.MyIpAddr.Val = TCPIP_STACK_NetAddress(netH);
+
+            TCPIP_MAC_ADDR * mac_ptr;
+            mac_ptr = (TCPIP_MAC_ADDR*) TCPIP_STACK_NetAddressMac(netH);
+            memcpy(&mac_ptr->v[0], &appData.MyMacAddr.v[0], 6);
+
+            if (dwLastIP.Val != appData.MyIpAddr.Val) {
+
+                dwLastIP.Val = appData.MyIpAddr.Val;
+                SYS_CONSOLE_PRINT("=============================================\n\r");
+                SYS_CONSOLE_PRINT("Build Time %s %s \n\r", __DATE__, __TIME__);
+                SYS_CONSOLE_PRINT("Default IP Address : %d.%d.%d.%d\r\n", appData.MyIpAddr.v[0], appData.MyIpAddr.v[1], appData.MyIpAddr.v[2], appData.MyIpAddr.v[3]);
+                SYS_CONSOLE_PRINT("Default MAC Address: %02x:%02x:%02x:%02x:%02x:%02x\r\n", appData.MyMacAddr.v[0], appData.MyMacAddr.v[1], appData.MyMacAddr.v[2], appData.MyMacAddr.v[3], appData.MyMacAddr.v[4], appData.MyMacAddr.v[5]);
+                SYS_CONSOLE_PRINT("T1S Node ID %d\n\r",DRV_LAN865X_PLCA_NODE_ID_IDX0_X);
+                appData.state = APP_STATE_SERVICE_TASKS;
+            }
+            break;        
+        
         case APP_STATE_SERVICE_TASKS:
         {
 
             break;
         }
 
+        case APP_STATE_IDLE:
+        {
+
+            break;
+        }
+        
         /* TODO: implement your application state machine.*/
 
 

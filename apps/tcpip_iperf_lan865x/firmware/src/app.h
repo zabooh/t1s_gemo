@@ -32,6 +32,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include "configuration.h"
+#include "config/FreeRTOS/definitions.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -63,6 +64,10 @@ typedef enum
     /* Application's state machine's initial state. */
     APP_STATE_INIT=0,
     APP_STATE_SERVICE_TASKS,
+    APP_STATE_INIT_TCPIP_WAIT_START,
+    APP_STATE_INIT_TCPIP_WAIT_FOR_IP,
+    APP_STATE_IDLE,
+
     /* TODO: Define states used by the application state machine. */
 
 } APP_STATES;
@@ -85,7 +90,8 @@ typedef struct
 {
     /* The application's current state */
     APP_STATES state;
-
+    IPV4_ADDR MyIpAddr;
+    TCPIP_MAC_ADDR MyMacAddr;
     /* TODO: Define any additional data used by the application. */
 
 } APP_DATA;
